@@ -25,7 +25,7 @@ import { HashSearchComponent } from './hash-search/hash-search.component';
         redirectTo: '/lineal-search',
         pathMatch: 'full'
       }
-    ])
+    ], { useHash: true })
   ],
   exports: [
     RouterModule

@@ -1,0 +1,36 @@
+.content {
+    padding: 20px;
+}
+
+.search-container {
+    display: flex;
+}
+
+.number {
+    width: 20px;
+    border: 1px solid gray;
+    border-radius: 2px;
+    text-align: center;
+    line-height: 20px;
+    background: #E3F0E1;
+    color: #707E81;
+    align-self: flex-end;
+}
+
+.number.selected {
+    border: 2px solid gray;
+    background: green;
+    color: white;
+}
+
+.number.found {
+    border: 2px solid black;
+    background: orange;
+    color: black;
+}
+
+.number.disabled {
+    border: 2px solid black;
+    background: gray;
+    color: black;
+}

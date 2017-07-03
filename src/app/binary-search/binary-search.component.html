@@ -1,3 +1,21 @@
-<p>
-  binary-search works!
-</p>
+<md-toolbar>
+  <span>Binary Search</span>
+</md-toolbar>
+<div class="content">
+  <app-search-form (search)="onSearch($event)" [disableSearch]="isSearching"></app-search-form>
+  <div *ngIf="currentSearch">
+    <div [hidden]="!isSearching">Searching...
+      <p>Comparing {{currentSearch.array[pointer]}} in position {{pointer}} === {{currentSearch.number}}</p>
+    </div>
+    <div [hidden]="!wasFound">Found! It was in {{this.pointer}} position.</div> 
+    <div [hidden]="wasFound || isSearching">Not found!</div> 
+    <div class="search-container">
+      <div class="number" [style.height.px]="number*20" title="Position: {{i}}" *ngFor="let number of currentSearch.array; let i = index"
+        [class.disabled]="isDisabled(i)"
+        [class.selected]="i === pointer"
+        [class.found]="wasFound && i === pointer">
+        {{number}}
+      </div>
+    </div>
+  </div>
+</div>

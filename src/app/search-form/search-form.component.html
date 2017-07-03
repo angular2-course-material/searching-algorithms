@@ -1,9 +1,14 @@
-<form class="example-form">
+<form [formGroup]="searchForm"  (ngSubmit)="onSubmit()">
   <md-input-container>
-    <input mdInput placeholder="Array" [(ngModel)]="arrayAsString" name="array">
+    <input mdInput placeholder="Array" formControlName="array">
+    <md-error *ngIf="searchForm.controls['array'].hasError('pattern') && searchForm.controls['array'].touched">
+      The format should be: 1,2,3
+    </md-error>
   </md-input-container>
+
   <md-input-container>
-    <input mdInput placeholder="Number to Search" [(ngModel)]="number" name="number">
+    <input mdInput type="number" placeholder="Number to Search" formControlName="number">
   </md-input-container>
-  <button md-raised-button (click)="onSearchClick()">Search</button>
+
+  <button type="submit" md-raised-button [disabled]="!searchForm.valid">Submit</button>
 </form>

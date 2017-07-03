@@ -2,6 +2,6 @@ md-sidenav {
   width: 200px;
 }
 
-.main-content {
-    /*height: 100%;*/
+md-nav-list {
+  padding-top: 0px;
 }

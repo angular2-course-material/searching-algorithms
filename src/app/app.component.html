@@ -1,23 +1,17 @@
 <md-toolbar color="primary">
   <span>Searching Algorithms</span>
 </md-toolbar>
+
 <md-sidenav-container>
   <md-sidenav mode="side" opened="true">
     <md-nav-list>
-      <md-list-item>
-        <a md-line [routerLink]="['/lineal-search']">Lineal Search</a>
-      </md-list-item>
-      <md-divider></md-divider>
-
-      <md-list-item>
-        <a md-line [routerLink]="['/binary-search']">Binary Search</a>
-      </md-list-item>
-      <md-divider></md-divider>
-
-      <md-list-item>
-        <a md-line [routerLink]="['/hash-search']">Hash Search</a>
-      </md-list-item>
-      <md-divider></md-divider>
+        <md-divider></md-divider>
+        <a md-list-item [routerLink]="['/lineal-search']">Lineal Search</a>
+        <md-divider></md-divider>
+        <a md-list-item [routerLink]="['/binary-search']">Binary Search</a>
+        <md-divider></md-divider>
+        <a md-list-item [routerLink]="['/hash-search']">Hash Search</a>
+        <md-divider></md-divider>
     </md-nav-list>
   </md-sidenav>
   <div class="main-content">

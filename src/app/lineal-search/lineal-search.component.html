@@ -2,27 +2,18 @@
   <span>Lineal Search</span>
 </md-toolbar>
 <div class="content">
-  <form class="example-form">
-    <md-input-container>
-      <input mdInput placeholder="Array" [(ngModel)]="stringArray" name="array">
-    </md-input-container>
-    <md-input-container>
-      <input mdInput placeholder="Number to Search" [(ngModel)]="numberToSearch" name="numberToSeach">
-    </md-input-container>
-    <button md-raised-button (click)="search()">Search</button>
-  </form>
-
-  <div *ngIf="array">
+  <app-search-form (search)="onSearch($event)"></app-search-form>
+  <div *ngIf="currentSearch">
     <div [hidden]="!isSearching">Searching...</div>
     <div [hidden]="!wasFound">Found! It was in {{this.pointer}} position.</div> 
     <div [hidden]="wasFound || isSearching">Not found!</div> 
     <div class="search-container">
-      <div class="number" *ngFor="let number of array; let i = index"
+      <div class="number" *ngFor="let number of currentSearch.array; let i = index"
         [class.selected]="i === pointer"
         [class.found]="wasFound && i === pointer">
         {{number}}
       </div>
     </div>
-    <div>Comparing {{array[pointer]}} === {{numberToSearch}}</div>
+    <div>Comparing {{currentSearch.array[pointer]}} in position {{pointer}} === {{currentSearch.number}}</div>
   </div>
 </div>

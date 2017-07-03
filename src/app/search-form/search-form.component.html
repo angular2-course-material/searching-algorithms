@@ -1,0 +1,9 @@
+<form class="example-form">
+  <md-input-container>
+    <input mdInput placeholder="Array" [(ngModel)]="arrayAsString" name="array">
+  </md-input-container>
+  <md-input-container>
+    <input mdInput placeholder="Number to Search" [(ngModel)]="number" name="number">
+  </md-input-container>
+  <button md-raised-button (click)="onSearchClick()">Search</button>
+</form>

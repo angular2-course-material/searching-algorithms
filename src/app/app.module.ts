@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { SearchFormModule } from './search-form/search-form.module';
 import { BinarySearchComponent } from './binary-search/binary-search.component';
 import { LinealSearchComponent } from './lineal-search/lineal-search.component';
 import { HashSearchComponent } from './hash-search/hash-search.component';
@@ -25,7 +26,7 @@ import { HashSearchComponent } from './hash-search/hash-search.component';
     FlexLayoutModule,
     MaterialModule,
     BrowserAnimationsModule,
-    FormsModule
+    SearchFormModule
   ],
   providers: [],
   bootstrap: [AppComponent]

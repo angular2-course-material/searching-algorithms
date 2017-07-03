@@ -2,7 +2,7 @@
   <span>Lineal Search</span>
 </md-toolbar>
 <div class="content">
-  <app-search-form (search)="onSearch($event)"></app-search-form>
+  <app-search-form (search)="onSearch($event)" [disableSearch]="isSearching"></app-search-form>
   <div *ngIf="currentSearch">
     <div [hidden]="!isSearching">Searching...</div>
     <div [hidden]="!wasFound">Found! It was in {{this.pointer}} position.</div> 

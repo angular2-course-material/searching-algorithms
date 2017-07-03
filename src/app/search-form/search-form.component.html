@@ -9,6 +9,5 @@
   <md-input-container>
     <input mdInput type="number" placeholder="Number to Search" formControlName="number">
   </md-input-container>
-
-  <button type="submit" md-raised-button [disabled]="!searchForm.valid">Submit</button>
+  <button type="submit" md-raised-button [disabled]="!searchForm.valid || disableSearch">Submit</button>
 </form>

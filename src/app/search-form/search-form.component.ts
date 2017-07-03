@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter, OnInit } from '@angular/core';
+import { Component, Output, EventEmitter, OnInit, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 import {Search} from '../search-form/search.model';
@@ -11,6 +11,7 @@ import {Search} from '../search-form/search.model';
 export class SearchFormComponent implements OnInit {
 
   @Output() search = new EventEmitter<Search>();
+  @Input() disableSearch = false;
 
   searchForm: FormGroup;
 

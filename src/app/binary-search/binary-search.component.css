@@ -34,3 +34,15 @@
     background: gray;
     color: black;
 }
+
+.number.min-index {
+    border: 2px solid black;
+    background: red;
+    color: black;
+}
+
+.number.max-index {
+    border: 2px solid black;
+    background: blue;
+    color: black;
+}

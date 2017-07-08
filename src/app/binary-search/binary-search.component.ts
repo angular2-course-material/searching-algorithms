@@ -14,8 +14,9 @@ export class BinarySearchComponent {
   wasFound = false;
   minIndex = 0;
   maxIndex = 0;
-  isDisabled() {
-    return false;
+
+  isDisabled(number) {
+    return (number < this.minIndex || number > this.maxIndex) && number !== this.pointer;
   }
 
   onSearch(search: Search) {
@@ -42,6 +43,6 @@ export class BinarySearchComponent {
         this.isSearching = false;
         clearInterval(intervalId);
       }
-    }, 2000)
+    }, 3000)
   }
 }
